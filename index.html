@@ -36,14 +36,14 @@ footer{padding:26px 0 44px;font-size:14px;color:var(--muted);border-top:1px soli
 </head>
 <body>
 <div class="wrap">
-<nav id="nav"><b>Amazon Capacity Commit</b><a href="#home" data-p="home">Home</a><a href="#offer" data-p="offer">The offer</a><a href="#strategy" data-p="strategy">V2 strategy</a><a href="#financial" data-p="financial">Financial case</a><a href="#pricing" data-p="pricing">Pricing</a><a href="#start" data-p="start">Get started</a></nav>
+<nav id="nav"><b>Amazon Capacity Commit</b><a href="#home" data-p="home">Home</a><a href="#offer" data-p="offer">The offer</a><a href="#pricing" data-p="pricing">Pricing</a><a href="#start" data-p="start">Get started</a></nav>
 <aside class="disclaimer" aria-label="Academic project disclaimer"><strong>ACADEMIC PROJECT — NOT AN OFFICIAL AMAZON OR AWS OFFER.</strong> This independent student concept is for coursework only and is not affiliated with or endorsed by Amazon or AWS. Proposed tiers, prices, delivery commitments, and model outputs are illustrative; they are not actual AWS products, terms, or guarantees. Company-reported figures are identified and linked where available. This site does not collect user data.</aside>
 <main>
 <section class="page" id="p-home">
 <p class="eyebrow">Capital-Efficient V2 | Same market</p>
 <h1>Build AWS capacity against contracts and cash-flow guardrails</h1>
 <p class="lead">Amazon V2 keeps the same retail and cloud markets, but changes how AWS capacity is sold, released, built, funded, and measured. The student proposal pairs contract-backed capacity with a capital gate and a silicon-first plan.</p>
-<a class="btn" href="#offer">Explore the offer</a><a class="btn alt" href="#financial">See the model scenarios</a>
+<a class="btn" href="#offer">Explore the offer</a><a class="btn alt" href="#pricing">See the model scenarios</a>
 <div class="grid">
 <div class="card top"><div class="big">+$34.7B</div><p>FY2028E free cash flow in the V2 Base Case.</p></div>
 <div class="card top"><div class="big">−$45.9B</div><p>FY2028E free cash flow in the Downside Case.</p></div>
@@ -64,9 +64,7 @@ footer{padding:26px 0 44px;font-size:14px;color:var(--muted);border-top:1px soli
 </div>
 <h2>Who it is for</h2>
 <div class="grid"><div class="card"><h3>Built for</h3><p>Frontier AI labs and large enterprises planning compute years ahead and seeking capacity, price, and delivery dates they can plan around.</p></div><div class="card"><h3>Not built for</h3><p>Demand that requires capacity to be built speculatively without a commitment. Burst remains best-effort at list price.</p></div></div>
-</section>
-
-<section class="page" id="p-offer">
+</section><section class="page" id="p-offer">
 <p class="eyebrow">The offer</p><h1>Three capacity tiers connect demand to delivery</h1>
 <p class="lead">The proposed tiers distinguish long-term committed demand from shorter-term flexibility and uncommitted use. All tiers use the same dashboard measures for utilisation, dates, and cost per unit.</p>
 <div class="grid">
@@ -80,10 +78,7 @@ footer{padding:26px 0 44px;font-size:14px;color:var(--muted);border-top:1px soli
 <h2>Retail price clarity</h2>
 <p class="lead">A separate V2 retail proposal would show the all-in price and delivery date before the address step. The research appendix says V1 journey captures showed shipping and tax appearing after an address was entered. This is a design proposal based on those captures, not a claim about every current Amazon checkout.</p>
 <p class="small">Custom-chip price-performance figures are company claims. Trainium2 is described as about 30% better price-performance in the shareholder letter; Graviton is described as 30–40% better in Q2 results. Benchmark workloads before making savings claims. <a href="#source-jassy">Trainium2 source</a> · <a href="#source-amazonq2">Graviton source</a></p>
-</section>
-
-<section class="page" id="p-strategy">
-<p class="eyebrow">V2 strategy</p><h1>Capital-Efficient: build to backlog in the same market</h1>
+<div class="integrated-content" id="strategy-content"><h2>Capital-efficient capacity strategy</h2>
 <p class="lead">The core decision is to scale AWS and AI capacity only when contracted demand, silicon fit, financing visibility, and asset yield support the next tranche. Retail remains part of the existing flywheel; retail capital is released against payback evidence.</p>
 <h2>Goals and tradeoffs</h2><div class="grid">
 <div class="card"><h3>Three goals</h3><p>Base Case free cash flow positive by FY2028E; all-in capacity build at or under 100% of operating cash flow by FY2028E; AWS operating margin at least 33% while targeting growth near 33% a year.</p></div>
@@ -103,10 +98,19 @@ footer{padding:26px 0 44px;font-size:14px;color:var(--muted);border-top:1px soli
 <div class="card"><h3>Funding visibility</h3><p>Partner structures can obscure capital costs. The proposal counts partner-funded capacity in the all-in build test.</p></div>
 <div class="card"><h3>Research limits</h3><p>Desk research only; no customer interviews were conducted. Strategic investments and existing lease commitments are not modelled as cash flows.</p></div>
 </div>
-</section>
-
-<section class="page" id="p-financial">
-<p class="eyebrow">Financial case</p><h1>The Base Case turns free cash flow positive in FY2028E</h1>
+</div></section><section class="page" id="p-pricing">
+<p class="eyebrow">Pricing</p><h1>Pay less for commitment and retain Burst for flexibility</h1>
+<div class="scroll"><table><tr><th>Tier</th><th>Term</th><th>Illustrative price basis</th><th>Availability</th></tr>
+<tr><td>Committed</td><td>3 years</td><td>Up to 40% below on-demand</td><td>Reserved, with delivery dates</td></tr>
+<tr><td>Flexible</td><td>1 year</td><td>Up to 20% below on-demand</td><td>Priority over Burst</td></tr>
+<tr><td>Burst</td><td>None</td><td>List price</td><td>Best-effort</td></tr></table></div>
+<p class="small">These tiers and prices are student design proposals for BUS6140; they are not Amazon terms or price lists.</p>
+<h2>Illustrative FY2027E AWS revenue by tier</h2><div class="scroll"><table><tr><th>Tier</th><th>Modelled share of AWS revenue</th><th>FY2027E revenue</th></tr>
+<tr><td>Committed</td><td>58%</td><td>$141.7B</td></tr><tr><td>Flexible</td><td>17%</td><td>$41.5B</td></tr><tr><td>Burst</td><td>25%</td><td>$61.1B</td></tr></table></div>
+<p class="small">The model treats tier mix as an author assumption and allocates AWS revenue across tiers; it does not imply AWS currently sells these products.</p>
+<h2>What sets the proposed price</h2><div class="grid">
+<div class="card"><h3>Commitment length</h3><p>Longer terms support a deeper discount in the proposal.</p></div><div class="card"><h3>Chip choice</h3><p>Qualifying Trainium or Graviton workloads may reduce cost per unit; the performance claims need workload-level validation.</p></div><div class="card"><h3>Minimum use</h3><p>A higher minimum-use commitment supports a lower illustrative price.</p></div></div>
+<div class="integrated-content" id="financial-content"><h2>Financial case</h2><h3>The Base Case turns free cash flow positive in FY2028E</h3>
 <p class="lead">The attached V2 model compares a Base Case with a Downside Case and a V1 reference trajectory. The outputs below are scenario results from an author-built model, not Amazon guidance or an investment forecast.</p>
 <div class="scroll"><table><tr><th>USD billions, unless noted</th><th>FY2025A</th><th>FY2026E</th><th>FY2027E</th><th>FY2028E</th></tr>
 <tr><td>Base Case free cash flow</td><td>$11.2</td><td>−$41.8</td><td>−$17.0</td><td><b>+$34.7</b></td></tr>
@@ -122,21 +126,15 @@ footer{padding:26px 0 44px;font-size:14px;color:var(--muted);border-top:1px soli
 <li>The model is annual with a quarterly phasing view. It does not include strategic investments and existing lease commitments as cash flows.</li>
 <li>Revisit FY2026 results, capex, leases, and segment results when Amazon publishes the FY2026 Form 10-K.</li>
 </ul>
-</section>
+</div></section>
 
-<section class="page" id="p-pricing">
-<p class="eyebrow">Pricing</p><h1>Pay less for commitment and retain Burst for flexibility</h1>
-<div class="scroll"><table><tr><th>Tier</th><th>Term</th><th>Illustrative price basis</th><th>Availability</th></tr>
-<tr><td>Committed</td><td>3 years</td><td>Up to 40% below on-demand</td><td>Reserved, with delivery dates</td></tr>
-<tr><td>Flexible</td><td>1 year</td><td>Up to 20% below on-demand</td><td>Priority over Burst</td></tr>
-<tr><td>Burst</td><td>None</td><td>List price</td><td>Best-effort</td></tr></table></div>
-<p class="small">These tiers and prices are student design proposals for BUS6140; they are not Amazon terms or price lists.</p>
-<h2>Illustrative FY2027E AWS revenue by tier</h2><div class="scroll"><table><tr><th>Tier</th><th>Modelled share of AWS revenue</th><th>FY2027E revenue</th></tr>
-<tr><td>Committed</td><td>58%</td><td>$141.7B</td></tr><tr><td>Flexible</td><td>17%</td><td>$41.5B</td></tr><tr><td>Burst</td><td>25%</td><td>$61.1B</td></tr></table></div>
-<p class="small">The model treats tier mix as an author assumption and allocates AWS revenue across tiers; it does not imply AWS currently sells these products.</p>
-<h2>What sets the proposed price</h2><div class="grid">
-<div class="card"><h3>Commitment length</h3><p>Longer terms support a deeper discount in the proposal.</p></div><div class="card"><h3>Chip choice</h3><p>Qualifying Trainium or Graviton workloads may reduce cost per unit; the performance claims need workload-level validation.</p></div><div class="card"><h3>Minimum use</h3><p>A higher minimum-use commitment supports a lower illustrative price.</p></div></div>
-</section>
+
+
+
+
+
+
+
 
 <section class="page" id="p-start">
 <p class="eyebrow">Get started</p><h1>Why now, and how to begin</h1>
@@ -163,7 +161,7 @@ footer{padding:26px 0 44px;font-size:14px;color:var(--muted);border-top:1px soli
 <footer>Independent student design concept for BUS6140 Deliverable 3 | November 2026</footer>
 </div>
 <script>
-(function(){var pages=["home","offer","strategy","financial","pricing","start"];function show(){var h=(location.hash||"").replace("#","");if(pages.indexOf(h)<0)h="home";pages.forEach(function(p){var el=document.getElementById("p-"+p);if(el)el.classList.toggle("on",p===h);});var links=document.querySelectorAll("#nav a");for(var i=0;i<links.length;i++)links[i].classList.toggle("on",links[i].getAttribute("data-p")===h);window.scrollTo(0,0);}window.addEventListener("hashchange",show);show();})();
+(function(){var pages=["home","offer","pricing","start"];function show(){var h=(location.hash||"").replace("#","");if(pages.indexOf(h)<0)h="home";pages.forEach(function(p){var el=document.getElementById("p-"+p);if(el)el.classList.toggle("on",p===h);});var links=document.querySelectorAll("#nav a");for(var i=0;i<links.length;i++)links[i].classList.toggle("on",links[i].getAttribute("data-p")===h);window.scrollTo(0,0);}window.addEventListener("hashchange",show);show();})();
 </script>
 </body>
 </html>
