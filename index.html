@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AWS Committed Capacity: Amazon V2</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap">
+<style>
+:root{--bg:#F4F1EA;--surface:#FFFFFF;--ink:#14213D;--muted:#5C5A52;--accent:#1F7A70;--warm:#B8741A;--line:#D8D1C0;--btn:#14213D;--btnink:#F4F1EA;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1729;--surface:#18233F;--ink:#EDE8DA;--muted:#B5B1A3;--accent:#4FC3B3;--warm:#F2A541;--line:#2C3A5E;--btn:#F2A541;--btnink:#0F1729}}
+:root[data-theme="dark"]{--bg:#0F1729;--surface:#18233F;--ink:#EDE8DA;--muted:#B5B1A3;--accent:#4FC3B3;--warm:#F2A541;--line:#2C3A5E;--btn:#F2A541;--btnink:#0F1729}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;line-height:1.55}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+nav{display:flex;flex-wrap:wrap;align-items:center;gap:8px 20px;padding:16px 0;border-bottom:1px solid var(--line);font-size:15px}
+nav b{font-family:'Space Grotesk',system-ui,sans-serif;margin-right:auto}
+nav a{color:var(--muted);text-decoration:none;font-weight:600;padding-bottom:4px;border-bottom:2px solid transparent}
+nav a.on{color:var(--accent);border-bottom-color:var(--accent)}
+h1,h2,h3{font-family:'Space Grotesk',system-ui,sans-serif;line-height:1.12;margin:0 0 12px}
+h1{font-size:clamp(34px,7vw,58px)} h2{font-size:clamp(24px,4.5vw,32px);margin-top:36px} h3{font-size:19px}
+.page{display:none;padding:40px 0 24px}.page.on{display:block}
+.eyebrow{color:var(--warm);font-weight:600;font-size:14px;letter-spacing:.04em;text-transform:uppercase;margin:0 0 10px}
+.lead{font-size:19px;color:var(--muted);max-width:720px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px}
+.card.top{border-top:5px solid var(--accent)}
+.big{font-family:'Space Grotesk',system-ui,sans-serif;font-size:32px;font-weight:700;color:var(--accent);line-height:1.1}
+.scroll{overflow-x:auto;margin-top:16px}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:15px}
+th,td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:var(--ink);color:var(--bg)}
+.small{font-size:14px;color:var(--muted)}
+.btn{display:inline-block;margin:20px 12px 0 0;padding:12px 20px;border-radius:8px;background:var(--btn);color:var(--btnink);text-decoration:none;font-weight:600}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+.cta{background:var(--surface);border:2px solid var(--accent);border-radius:14px;padding:24px;margin-top:28px}
+.disclaimer{margin:18px 0 0;padding:14px 16px;border:1px solid var(--warm);border-left:5px solid var(--warm);border-radius:8px;background:var(--surface);font-size:14px;color:var(--ink)}
+.disclaimer strong{color:var(--warm);letter-spacing:.03em}
+footer{padding:28px 0 48px;font-size:14px;color:var(--muted);border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav id="nav"><b>AWS Committed Capacity</b><a href="#home" data-p="home">Home</a><a href="#offer" data-p="offer">The offer</a><a href="#pricing" data-p="pricing">Pricing</a><a href="#start" data-p="start">Get started</a></nav>
+<aside class="disclaimer" aria-label="Academic project disclaimer"><strong>ACADEMIC PROJECT — NOT AN OFFICIAL AMAZON OR AWS OFFER.</strong> This independent student concept is for coursework only and is not affiliated with or endorsed by Amazon or AWS. Proposed tiers, prices, delivery commitments, and performance figures are illustrative and do not represent actual AWS products, terms, or guarantees. This site does not collect user data.</aside>
+<main>
+
+<div class="page" id="p-home">
+<p class="eyebrow">Amazon V2 | Capacity you can count on</p>
+<h1>Compute that arrives on the date it was promised</h1>
+<p class="lead">Sign a multi-year commitment and get reserved AWS capacity, a locked price and a delivery date, with lower cost per unit on Amazon’s own Trainium and Graviton chips.</p>
+<a class="btn" href="#start">Request a capacity briefing</a><a class="btn alt" href="#offer">See the offer</a><a class="btn alt" href="#pricing">See pricing</a>
+<h2>Why committed capacity</h2>
+<div class="grid">
+<div class="card top"><h3>Certainty</h3><p>Each commitment is backed by a delivery date. Amazon releases new capacity only against signed demand, so promises are built to be kept.</p></div>
+<div class="card top"><h3>Lower cost per unit</h3><p>Workloads that qualify can move to custom chips. Amazon reports about 30% better price-performance for Trainium2 (company claim).</p></div>
+<div class="card top"><h3>Clarity</h3><p>One dashboard shows utilisation, delivery dates and cost per unit. Shoppers on Amazon.com see the all-in price and delivery date before checkout.</p></div>
+</div>
+<h2>Who it is for</h2>
+<div class="grid">
+<div class="card"><h3>Built for</h3><p>AI labs and large enterprises that plan compute years ahead and need capacity, price and dates they can rely on.</p></div>
+<div class="card"><h3>Not built for</h3><p>Teams that need capacity created on speculation, with no commitment. They can still use Burst at list price.</p></div>
+</div>
+<div class="grid">
+<div class="card top"><div class="big">$578B</div><p class="small">AWS contracted backlog, Q3 2026 (company-reported)</p></div>
+<div class="card top"><div class="big">+39%</div><p class="small">AWS growth in Q3 2026</p></div>
+<div class="card top"><div class="big">26%</div><p class="small">AWS share of cloud spend, Q3 2026 (Synergy)</p></div>
+</div>
+</div>
+
+<div class="page" id="p-offer">
+<p class="eyebrow">The offer</p>
+<h1>Three clear tiers replace overlapping choices</h1>
+<p class="lead">Pick the commitment that matches how predictable your demand is. Every tier shows the same cost and delivery information.</p>
+<div class="grid">
+<div class="card top"><h3>Committed</h3><p><b>3-year term, minimum use.</b> Reserved capacity, locked price, delivery dates, and help moving workloads to custom chips.</p></div>
+<div class="card top"><h3>Flexible</h3><p><b>1-year term, lower minimum.</b> Priority over burst capacity, with an option to step up to Committed.</p></div>
+<div class="card top"><h3>Burst</h3><p><b>No commitment.</b> Use capacity when it is free, at list price. Availability is best-effort.</p></div>
+</div>
+<h2>How it works</h2>
+<div class="grid">
+<div class="card"><h3>1. Commit</h3><p>Share your compute plan and sign a term.</p></div>
+<div class="card"><h3>2. Plan</h3><p>Get a delivery schedule and a migration plan for qualifying workloads.</p></div>
+<div class="card"><h3>3. Deliver</h3><p>Capacity arrives on the promised dates; your dashboard tracks it.</p></div>
+<div class="card"><h3>4. Review</h3><p>Quarterly review of use, cost per unit and step-up options.</p></div>
+</div>
+<h2>For shoppers on Amazon.com</h2>
+<p class="lead">The same idea applies at checkout: the all-in price, including shipping and tax, and the delivery date appear before you enter your address details, so there are no late surprises.</p>
+<a class="btn" href="#pricing">See pricing</a>
+</div>
+
+<div class="page" id="p-pricing">
+<p class="eyebrow">Pricing</p>
+<h1>Pay less for commitment, keep burst when you need it</h1>
+<div class="scroll"><table>
+<tr><th>Tier</th><th>Term</th><th>Price basis (illustrative)</th><th>Availability</th></tr>
+<tr><td>Committed</td><td>3 years</td><td>Up to 40% below on-demand</td><td>Reserved, with delivery dates</td></tr>
+<tr><td>Flexible</td><td>1 year</td><td>Up to 20% below on-demand</td><td>Priority over Burst</td></tr>
+<tr><td>Burst</td><td>None</td><td>List price</td><td>Best-effort</td></tr>
+</table></div>
+<p class="small">Illustrative example: a workload that costs 100 units a month on-demand would cost about 60 units on Committed, and about 80 on Flexible, before any gain from moving to custom chips.</p>
+<h2>What sets the price</h2>
+<div class="grid">
+<div class="card"><h3>Commitment length</h3><p>Longer terms let Amazon release capacity with confidence, so they earn a deeper discount.</p></div>
+<div class="card"><h3>Chip choice</h3><p>Workloads that run on Trainium or Graviton can cost less per unit.</p></div>
+<div class="card"><h3>Minimum use</h3><p>A higher minimum use commitment supports a lower price.</p></div>
+</div>
+<p class="small">These tiers and prices are a student design proposal for BUS6140 and are not Amazon terms or price lists.</p>
+<a class="btn" href="#start">Request a capacity briefing</a>
+</div>
+
+<div class="page" id="p-start">
+<p class="eyebrow">Get started</p>
+<h1>Why now, and how to begin</h1>
+<h2>The market is moving fast</h2>
+<div class="scroll"><table>
+<tr><th>Provider</th><th>Q3 2026 growth</th><th>Contract backlog (latest)</th></tr>
+<tr><td>AWS</td><td>+39% (company)</td><td>$578B</td></tr>
+<tr><td>Microsoft Azure</td><td>+48% (Synergy)</td><td>$678B commercial backlog</td></tr>
+<tr><td>Google Cloud</td><td>+103% (Synergy)</td><td>$514B</td></tr>
+</table></div>
+<p class="small">Rivals are growing fast and spending heavily, so capacity is scarce. Committing early is how buyers secure delivery dates.</p>
+<h2>Honest limits</h2>
+<div class="grid">
+<div class="card"><h3>Claims to verify</h3><p>Backlog, chip price-performance and adoption figures are company or press reports.</p></div>
+<div class="card"><h3>Concentration</h3><p>Backlog is concentrated in a few AI labs; Amazon also invests in some of them.</p></div>
+</div>
+<div class="cta">
+<h2 style="margin-top:0">Request a capacity commitment briefing</h2>
+<p>Three steps: (1) share your three-year compute plan, (2) receive a delivery schedule and tier proposal, (3) choose a tier and sign.</p>
+<a class="btn" href="mailto:?subject=Capacity%20commitment%20briefing%20request&body=Our%20three-year%20compute%20plan%20and%20timing%3A">Request a briefing by email</a>
+</div>
+<h2>Sources</h2>
+<p class="small">Amazon FY2023 to FY2025 Form 10-K and V1 workbook; Q2 and Q3 2026 results coverage (constellationr.com, ai2.work); Synergy Research Q3 2026 (datacenterdynamics.com, telecomtv.com); CEO shareholder letter (aboutamazon.com); competitor results (invezz.com, fortune.com); Walmart Q2 FY2027 (nasdaq.com). The full register is in the Research Appendix.</p>
+</div>
+
+</main>
+<footer>Independent student design concept for BUS6140 Phase 3 | November 2026</footer>
+</div>
+<script>
+(function(){
+var pages=["home","offer","pricing","start"];
+function show(){
+  var h=(location.hash||"").replace("#","");
+  if(pages.indexOf(h)<0)h="home";
+  pages.forEach(function(p){var el=document.getElementById("p-"+p);if(el)el.classList.toggle("on",p===h);});
+  var links=document.querySelectorAll("#nav a");
+  for(var i=0;i<links.length;i++)links[i].classList.toggle("on",links[i].getAttribute("data-p")===h);
+  window.scrollTo(0,0);
+}
+window.addEventListener("hashchange",show);
+show();
+})();
+</script>
+</body>
+</html>
